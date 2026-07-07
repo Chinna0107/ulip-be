@@ -15,8 +15,8 @@ router.post('/login', async (req, res) => {
 
     // Admin bypass for testing
     if (email === 'admin@ulip.com' && password === 'password') {
-      const token = jwt.sign({ id: 1, email: 'admin@ulip.com' }, JWT_SECRET, { expiresIn: '24h' });
-      return res.json({ token, message: "Login successful" });
+      const token = jwt.sign({ id: 1, email: 'admin@ulip.com', role: 'admin' }, JWT_SECRET, { expiresIn: '24h' });
+      return res.json({ token, role: 'admin', message: "Login successful" });
     }
 
     if (!user) {
@@ -28,8 +28,9 @@ router.post('/login', async (req, res) => {
       return res.status(401).json({ message: "Invalid email or password" });
     }
 
-    const token = jwt.sign({ id: user.id, email: user.email }, JWT_SECRET, { expiresIn: '24h' });
-    res.json({ token, message: "Login successful" });
+    const role = user.role || 'user';
+    const token = jwt.sign({ id: user.id, email: user.email, role: role }, JWT_SECRET, { expiresIn: '24h' });
+    res.json({ token, role, message: "Login successful" });
   } catch (error) {
     console.error("Login error:", error);
     res.status(500).json({ message: "Internal server error" });

@@ -21,9 +21,17 @@ const initDB = async () => {
         id SERIAL PRIMARY KEY,
         email TEXT UNIQUE,
         password TEXT,
-        name TEXT
+        name TEXT,
+        role TEXT DEFAULT 'user'
       );
     `);
+
+    // Add role column to existing table if it doesn't exist
+    try {
+      await client.query(`ALTER TABLE users ADD COLUMN IF NOT EXISTS role TEXT DEFAULT 'user';`);
+    } catch (e) {
+      console.log("Column 'role' might already exist or could not be added.");
+    }
 
     // Create generic records table
     // Using JSONB for the dynamic data column in Postgres

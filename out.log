@@ -11,3 +11,70 @@ See https://www.postgresql.org/docs/current/libpq-ssl.html for libpq SSL mode de
 Server running on port 5001
 Connected to Neon DB (PostgreSQL).
 Database initialized
+GET records error: Error: getaddrinfo ENOTFOUND ep-aged-dawn-adkozxcz-pooler.c-2.us-east-1.aws.neon.tech
+    at /Users/hemanthkancharla/Documents/zewotech/ulip-be/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/hemanthkancharla/Documents/zewotech/ulip-be/src/routes/records.js:10:23 {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'ep-aged-dawn-adkozxcz-pooler.c-2.us-east-1.aws.neon.tech'
+}
+GET records error: Error: getaddrinfo ENOTFOUND ep-aged-dawn-adkozxcz-pooler.c-2.us-east-1.aws.neon.tech
+    at /Users/hemanthkancharla/Documents/zewotech/ulip-be/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/hemanthkancharla/Documents/zewotech/ulip-be/src/routes/records.js:10:23 {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'ep-aged-dawn-adkozxcz-pooler.c-2.us-east-1.aws.neon.tech'
+}
+GET records error: Error: getaddrinfo ENOTFOUND ep-aged-dawn-adkozxcz-pooler.c-2.us-east-1.aws.neon.tech
+    at /Users/hemanthkancharla/Documents/zewotech/ulip-be/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/hemanthkancharla/Documents/zewotech/ulip-be/src/routes/records.js:10:23 {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'ep-aged-dawn-adkozxcz-pooler.c-2.us-east-1.aws.neon.tech'
+}
+GET records error: Error: getaddrinfo ENOTFOUND ep-aged-dawn-adkozxcz-pooler.c-2.us-east-1.aws.neon.tech
+    at /Users/hemanthkancharla/Documents/zewotech/ulip-be/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/hemanthkancharla/Documents/zewotech/ulip-be/src/routes/records.js:10:23 {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'ep-aged-dawn-adkozxcz-pooler.c-2.us-east-1.aws.neon.tech'
+}
+GET records error: Error: getaddrinfo ENOTFOUND ep-aged-dawn-adkozxcz-pooler.c-2.us-east-1.aws.neon.tech
+    at /Users/hemanthkancharla/Documents/zewotech/ulip-be/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/hemanthkancharla/Documents/zewotech/ulip-be/src/routes/records.js:10:23 {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'ep-aged-dawn-adkozxcz-pooler.c-2.us-east-1.aws.neon.tech'
+}
+GET records error: Error: getaddrinfo ENOTFOUND ep-aged-dawn-adkozxcz-pooler.c-2.us-east-1.aws.neon.tech
+    at /Users/hemanthkancharla/Documents/zewotech/ulip-be/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/hemanthkancharla/Documents/zewotech/ulip-be/src/routes/records.js:10:23 {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'ep-aged-dawn-adkozxcz-pooler.c-2.us-east-1.aws.neon.tech'
+}
+GET records error: Error: getaddrinfo ENOTFOUND ep-aged-dawn-adkozxcz-pooler.c-2.us-east-1.aws.neon.tech
+    at /Users/hemanthkancharla/Documents/zewotech/ulip-be/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/hemanthkancharla/Documents/zewotech/ulip-be/src/routes/records.js:10:23 {
+  errno: -3008,
+  code: 'ENOTFOUND',
+  syscall: 'getaddrinfo',
+  hostname: 'ep-aged-dawn-adkozxcz-pooler.c-2.us-east-1.aws.neon.tech'
+}
+GET records error: Error: Connection terminated unexpectedly
+    at /Users/hemanthkancharla/Documents/zewotech/ulip-be/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async /Users/hemanthkancharla/Documents/zewotech/ulip-be/src/routes/records.js:10:23
