@@ -51,6 +51,15 @@ const initDB = async () => {
         columns JSONB
       );
     `);
+
+    // Create settings table for global config like budget allocations
+    await client.query(`
+      CREATE TABLE IF NOT EXISTS settings (
+        key TEXT PRIMARY KEY,
+        value JSONB,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      );
+    `);
     
   } catch (error) {
     console.error("Database initialization error:", error);

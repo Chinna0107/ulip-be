@@ -5,6 +5,7 @@ const { initDB } = require('./src/database');
 const authRoutes = require('./src/routes/auth');
 const recordsRoutes = require('./src/routes/records');
 const usersRoutes = require('./src/routes/users');
+const settingsRoutes = require('./src/routes/settings');
 
 const app = express();
 const PORT = process.env.PORT || 5001;
@@ -24,6 +25,7 @@ initDB().then(() => {
 app.use('/api/auth', authRoutes);
 app.use('/api/records', recordsRoutes);
 app.use('/api/users', usersRoutes);
+app.use('/api/settings', settingsRoutes);
 
 // Simple health check
 app.get('/api/health', (req, res) => {
