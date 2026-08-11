@@ -23,8 +23,7 @@ const seedDB = async () => {
     try {
       await client.query("BEGIN");
       
-      // Clear existing data
-      await client.query("DELETE FROM records");
+      // Clear existing column definitions
       await client.query("DELETE FROM sheet_columns");
 
       for (const sheetName of workbook.SheetNames) {
@@ -62,31 +61,7 @@ const seedDB = async () => {
           [sheetName, JSON.stringify(columns)]
         );
 
-        // Extract and insert data rows
-        for (let i = headerRowIndex + 1; i < jsonData.length; i++) {
-          const row = jsonData[i];
-          if (!row || row.length === 0 || row.every(val => val == null || String(val).trim() === '')) {
-            continue;
-          }
-          
-          const rowData = {};
-          let hasData = false;
-          
-          validHeaderIndices.forEach(colIndex => {
-            const val = row[colIndex];
-            if (val != null && String(val).trim() !== '') {
-              rowData[`col_${colIndex}`] = val;
-              hasData = true;
-            }
-          });
 
-          if (hasData) {
-            await client.query(
-              "INSERT INTO records (sheet_name, data) VALUES ($1, $2)",
-              [sheetName, JSON.stringify(rowData)]
-            );
-          }
-        }
       }
       
       await client.query("COMMIT");
